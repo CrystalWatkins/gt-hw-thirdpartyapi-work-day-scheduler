@@ -20,9 +20,8 @@ $("#currentDay").text(moment().format("MMMM Do YYYY"));
 var container = $(".time-block");
 var timeRow = $("<div>").addClass("row");
 var timeCol = $("<div>").addClass("col-sm-2 hour");
-var scheduleCol = $("<div>").addClass("col-sm-8 past present future");
-var saveCol = $("<div>").addClass("col-sm-2 saveBtn");
-var textarea= $("<form>").addClass("textarea")
+var scheduleCol = $("<input>").addClass("col-sm-8 past present future");
+var saveCol = $("<button>").addClass("col-sm-2 saveBtn");
 
 timeRow.append(timeCol);
 container.append(timeRow);
@@ -30,8 +29,8 @@ $(".hour").text("");
 timeCol.after(scheduleCol);
 $(".past").text("");
 scheduleCol.after(saveCol);
-$(".saveBtn").text("save button");
-scheduleCol.append(textarea);
+$(".saveBtn").html('<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm2 16H5V5h11.17L19 7.83V19zm-7-7c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zM6 6h9v4H6z"/></svg>');
+    saveCol.addClass(".saveBtn i:hover");
 
     var timeList = [
      "9 AM",
@@ -52,11 +51,6 @@ for (var i = 0; i < timeList.length; i ++) {
 
 
     
-    // $(document).click(function(){
-    //     $("text").append("<input />");
-    //     $("input").text("#scheduleCol")
-        
-    // })
 
     // var newRow = $('.row');
     // for (var i = 0; i < 8; i++) {
@@ -64,9 +58,7 @@ for (var i = 0; i < timeList.length; i ++) {
     // //   timeCol.attr("id", "timeDisplay" + [i]);
     // };
 
-// use this function event as event listener
-// $("#click-me").on("click", function() {
-//   alert("I've been clicked!");
+
 
 });
 
