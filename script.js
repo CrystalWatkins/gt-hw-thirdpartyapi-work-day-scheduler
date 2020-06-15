@@ -21,8 +21,14 @@ $("#currentDay").text(moment().format("MMMM Do YYYY"));
     var hourList = timeList[i];
     var timeRow = $("<div class= 'row'>");
     var timeCol = $("<div class= 'col-sm-1 hour'>");
-    var scheduleCol = $("<textarea class= 'col-sm-8 time-sensitive form-control'>");
-    var saveCol = $("<button class= 'col-sm-1 saveBtn'>"); 
+    var scheduleCol = $("<textarea>", {
+        class: "col-sm-8 time-sensitive form-control",
+        id: "text-" + i
+    });
+    var saveCol = $("<button>", {
+        class: "col-sm-1 saveBtn",
+        id: "btn-" + i
+    }); 
     timeRow.text(hourList);
     timeRow.append(timeCol).append(scheduleCol).append(saveCol);
     container.append(timeRow);
@@ -37,8 +43,9 @@ $("#currentDay").text(moment().format("MMMM Do YYYY"));
         $(scheduleCol).addClass("future");
     }
 
-    $(".saveBtn").on("click", function(event) {
-        var text = $(".form-control").val();
+    $("#btn-" + i).on("click", function(event) {
+        console.log(this);
+        var text = $("#text-" + i).val();
         event.preventDefault();
         if (text != "") {
             console.log(text);
@@ -47,6 +54,25 @@ $("#currentDay").text(moment().format("MMMM Do YYYY"));
         }
         localStorage.setItem("text", JSON.stringify(text))
     });
+
+
+
+    // function saveText (){
+    //     var text = $(".form-control").val();
+    //     event.preventDefault();
+    //     if (text) {
+    //         console.log(text)
+    //     }
+    // }
+
+    // $("#btn-1").click(saveText);
+    
+
+
+
+
+
+
 
     };
 });
