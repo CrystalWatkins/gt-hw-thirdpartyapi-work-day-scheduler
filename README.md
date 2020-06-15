@@ -2,7 +2,7 @@
 
 ## Description 
 
-This is a homework requirement for GT Full Stack Flex Program. This webpage ...
+This is a homework requirement for GT Full Stack Flex Program. This webpage is designed for to run from 9am to 5pm, a typical workday. You can add items to the column, by typing in the block and then hitting the save button. All past time is in grey, all future time is green, and the current time is red.
 
 
 ## Table of Contents
@@ -21,26 +21,24 @@ This is a homework requirement for GT Full Stack Flex Program. This webpage ...
 1. Clone the repo
 2. Open the index.html file
 
-[Link to Code](#)
+[Link to Code](https://github.com/CrystalWatkinsgt-hw-thirdpartyapi-work-day-scheduler)
  
-[Website link for My Portfolio Page]()
+[Website link for My Portfolio Page](https://crystalwatkins.github.io/gt-hw-thirdpartyapi-work-day-scheduler/)
 
 
 ## Usage 
 
-....
+This can be used to create your work day schedule. Save your data entries in the time block!
 
-[Link to Code](#).
+[Link to Code](https://github.com/CrystalWatkinsgt-hw-thirdpartyapi-work-day-scheduler).
  
-[Website link for My Portfolio Page](#).
+[Website link for My Portfolio Page](https://crystalwatkins.github.io/gt-hw-thirdpartyapi-work-day-scheduler/).
 
-![Web Page 1](#)
-![Web Page 2](#)
+![Web Page 1](webpage.png)
 
 ## Credits
 
-This was an ... completed as a homework for the Georgia 
-Tech, FullStack Flex Program.
+This was a third party web API calendar completed as a homework for the Georgia Tech, FullStack Flex Program.
 
 ## MIT_License
 
